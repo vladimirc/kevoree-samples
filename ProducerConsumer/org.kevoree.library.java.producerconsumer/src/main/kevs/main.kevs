@@ -1,0 +1,21 @@
+merge mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:3.0.0-SNAPSHOT
+merge mvn:org.kevoree.library.java:org.kevoree.library.java.sample.component:3.0.0-SNAPSHOT
+merge mvn:org.kevoree.library.java:org.kevoree.library.java.channels:3.0.0-SNAPSHOT
+
+add node0 : JavaNode
+//add consumer : HelloConsumerComponent
+//add producer : HelloProducerComponent
+//move consumer, producer node0
+//add channel : AsyncBroadcast
+
+//bind producer.produce channel
+//bind consumer.consumeHello channel
+
+
+add frame : Frame
+add popup : Popup
+move frame, popup node0
+add channel : AsyncBroadcast
+
+bind frame.textEntered channel
+bind popup.pop channel
