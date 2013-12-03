@@ -1,6 +1,7 @@
 package org.kevoree.library.javase.helloworld.second;
 
 import org.kevoree.annotation.ComponentType;
+import org.kevoree.annotation.Library;
 import org.kevoree.annotation.Output;
 import org.kevoree.api.Callback;
 import org.kevoree.api.Port;
@@ -19,6 +20,7 @@ import java.awt.event.ActionListener;
  */
 
 @ComponentType
+@Library(name = "Java - Samples")
 public class Frame {
 
     private JFrame mainFrame;

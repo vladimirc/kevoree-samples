@@ -12,12 +12,12 @@ import java.util.List;
  * Date: 27/10/11
  * Time: 13:42
  */
-@Library(name = "Java - Samples")
 @ComponentType
+@Library(name = "Java - Samples")
 public class HelloProducerComponent implements HelloProductionListener {
 
     @Output
-    private org.kevoree.api.Port produce;
+    private org.kevoree.api.Port helloProducedPort;
 
     private HelloProducerThread producer;
 
@@ -46,10 +46,9 @@ public class HelloProducerComponent implements HelloProductionListener {
         startComponent();
     }
 
-    @Input
     public void helloProduced(Object helloValue) {
 
-        produce.call(helloValue);
+        helloProducedPort.call(helloValue);
 
     }
 }

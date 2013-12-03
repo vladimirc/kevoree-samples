@@ -2,6 +2,7 @@ package org.kevoree.library.javase.helloworld.second;
 
 import org.kevoree.annotation.ComponentType;
 import org.kevoree.annotation.Input;
+import org.kevoree.annotation.Library;
 
 import javax.swing.*;
 
@@ -12,7 +13,9 @@ import javax.swing.*;
  * Time: 17:43
  * To change this template use File | Settings | File Templates.
  */
+
 @ComponentType
+@Library(name = "Java - Samples")
 public class Popup {
 
     @Input
