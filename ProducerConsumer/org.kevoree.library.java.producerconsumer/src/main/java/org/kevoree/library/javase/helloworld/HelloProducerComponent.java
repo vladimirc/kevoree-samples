@@ -12,7 +12,7 @@ import java.util.List;
  * Date: 27/10/11
  * Time: 13:42
  */
-
+@Library(name = "Java - Samples")
 @ComponentType
 public class HelloProducerComponent implements HelloProductionListener {
 
@@ -21,7 +21,7 @@ public class HelloProducerComponent implements HelloProductionListener {
 
     private HelloProducerThread producer;
 
-    @Param
+    @Param(defaultValue = "2000")
     private int delay = 2000;
 
     @Start

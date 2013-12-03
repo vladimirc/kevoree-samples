@@ -46,7 +46,7 @@ public class HelloProducerThread extends Thread {
     private void produceHello() {
         for(final HelloProductionListener listener : listeners) {
             new Thread(new Runnable(){
-                public void run() {listener.helloProduced("Bonjour time " + time);}
+                public void run() {listener.helloProduced("Hello time " + time);}
             }).start();
         }
     }

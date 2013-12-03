@@ -1,4 +1,4 @@
-package org.kevoree.library.javase.helloworld;
+package org.kevoree.library.javase.producerconsumer;
 
 import org.kevoree.annotation.*;
 
@@ -10,7 +10,7 @@ import org.kevoree.annotation.*;
  */
 
 @ComponentType
-@Library(name = "Library")
+@Library(name = "Java - Samples")
 public class HelloConsumerComponent {
 
     @Start

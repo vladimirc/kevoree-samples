@@ -17,7 +17,11 @@ public class Popup {
 
     @Input
     public boolean pop(Object msg) {
-        return JOptionPane.showConfirmDialog(null, msg,"Message Received", JOptionPane.YES_NO_CANCEL_OPTION) == JOptionPane.OK_OPTION;
+
+        //Asks the user to answer yes or no to a message
+        int response = JOptionPane.showConfirmDialog(null, msg,"Message Received", JOptionPane.YES_NO_CANCEL_OPTION);
+
+        return  response == JOptionPane.OK_OPTION;
     }
 
 

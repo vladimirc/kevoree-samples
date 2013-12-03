@@ -35,12 +35,12 @@ public class Frame {
         textField = new JTextField(20);
         send = new JButton("Send");
 
-        send.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        send.addActionListener(new ActionListener() { //Listen to the send button.
+            public void actionPerformed(ActionEvent e) { //on click
                 textEntered.call(textField.getText(), new Callback() {
-                    @Override
-                    public void run(Object result) {
-                        JOptionPane.showMessageDialog(mainFrame, ((Boolean)result?"Ack":"NACK"), "Message Read!", JOptionPane.INFORMATION_MESSAGE);
+                    public void run(Object result) { // Method called when a response is received.
+                        String response = ((Boolean)result?"Ack":"NACK");
+                        JOptionPane.showMessageDialog(mainFrame, response, "Message Read!", JOptionPane.INFORMATION_MESSAGE);
                     }
                 });
             }
