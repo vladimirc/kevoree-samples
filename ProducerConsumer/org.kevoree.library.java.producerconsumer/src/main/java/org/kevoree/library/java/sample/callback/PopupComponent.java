@@ -1,4 +1,4 @@
-package org.kevoree.library.javase.helloworld.second;
+package org.kevoree.library.java.sample.callback;
 
 import org.kevoree.annotation.ComponentType;
 import org.kevoree.annotation.Input;
@@ -11,12 +11,11 @@ import javax.swing.*;
  * User: gregory.nain
  * Date: 28/11/2013
  * Time: 17:43
- * To change this template use File | Settings | File Templates.
  */
 
 @ComponentType
 @Library(name = "Java - Samples")
-public class Popup {
+public class PopupComponent {
 
     @Input
     public boolean pop(Object msg) {

@@ -1,9 +1,6 @@
-package org.kevoree.library.javase.helloworld;
+package org.kevoree.library.java.sample.producerconsumer;
 
 import org.kevoree.annotation.*;
-import org.kevoree.api.Port;
-
-import java.util.List;
 
 
 /**

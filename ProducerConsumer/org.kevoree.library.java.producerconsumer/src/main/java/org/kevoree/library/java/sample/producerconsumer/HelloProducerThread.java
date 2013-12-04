@@ -1,4 +1,4 @@
-package org.kevoree.library.javase.helloworld;
+package org.kevoree.library.java.sample.producerconsumer;
 
 import java.util.ArrayList;
 

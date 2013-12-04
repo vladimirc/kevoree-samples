@@ -1,4 +1,4 @@
-package org.kevoree.library.javase.producerconsumer;
+package org.kevoree.library.java.sample.producerconsumer;
 
 import org.kevoree.annotation.*;
 
