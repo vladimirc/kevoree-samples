@@ -1,0 +1,38 @@
+//Adds a repository (for snapshots)
+repo "http://oss.sonatype.org/content/groups/public/"
+
+//Includes the libraries of types in the model
+include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:3.0.0-SNAPSHOT
+include mvn:org.kevoree.library.java:org.kevoree.library.java.channels:3.0.0-SNAPSHOT
+include mvn:org.kevoree.library.java:org.kevoree.library.java.sample.producerconsumer:3.0.0-SNAPSHOT
+include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:3.0.0-SNAPSHOT
+
+//Creates a node and sets its properties
+add node0 : JavaNode/3.0.0-SNAPSHOT
+set node0.debug = "false"
+set node0.started = "true"
+
+// Creates a Consumer component instance and set its properties
+add node0.consumer : HelloConsumerComponent/3.0.0-SNAPSHOT
+set node0.consumer.started = "true"
+
+// Creates a Producer component instance and set its properties
+add node0.producer : HelloProducerComponent/3.0.0-SNAPSHOT
+set node0.producer.delay = "2000"
+set node0.producer.started = "true"
+
+// Creates a communication channel and set its properties
+add productionChannel : AsyncBroadcast/3.0.0-SNAPSHOT
+set productionChannel.started = "true"
+
+// Binds the producer and consumer ports to the channel
+bind node0.producer.helloProducedPort productionChannel
+bind node0.consumer.consumeHello productionChannel
+
+// Creates a group (for model updates), sets its properties and connects the node to the group.
+add sync : WSGroup/3.0.0-SNAPSHOT
+set sync.port/node0 = "9000"
+set sync.started = "true"
+attach node0 sync
+
+
