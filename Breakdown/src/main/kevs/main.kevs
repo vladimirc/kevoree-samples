@@ -1,0 +1,10 @@
+include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:latest
+include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:latest
+
+//this include your library, do'nt forget to do mvn clean install before
+include mvn:org.kevoree.library.java:org.kevoree.library.java.sample.producerconsumer:latest
+
+add node0 : JavaNode
+add node0.breakdown : BreakdownAlone
+
+
