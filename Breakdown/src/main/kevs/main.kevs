@@ -1,10 +1,23 @@
 include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:latest
 include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:latest
+include mvn:org.kevoree.library.java:org.kevoree.library.java.toys:latest
+include mvn:org.kevoree.library.java:org.kevoree.library.java.channels:latest
 
-//this include your library, do'nt forget to do mvn clean install before
-include mvn:org.kevoree.library.java:org.kevoree.library.java.sample.producerconsumer:latest
+//this include your library, don't forget to do mvn clean install before
+include mvn:org.kevoree.library.java:org.kevoree.library.java.sample.breakdown:latest
 
 add node0 : JavaNode
 add node0.breakdown : BreakdownAlone
 
+add sync : WSGroup
+attach node0 sync
+
+add node0.ticker : Ticker
+add hub : SyncBroadcast
+bind node0.ticker.tick hub
+bind node0.breakdown.input hub
+
+//set the period of Ticker
+set node0.ticker.period = "1000"
+set node0.breakdown.time = "2000"
 

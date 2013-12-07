@@ -8,7 +8,8 @@
         <version>3.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>org.kevoree.library.java.sample.breakdown</artifactId>
+    <artifactId>org.kevoree.library.java.sample.scaler</artifactId>
+
 
     <dependencies>
         <dependency>
