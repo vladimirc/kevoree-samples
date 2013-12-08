@@ -1,0 +1,17 @@
+include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:latest
+include mvn:org.kevoree.library.java:org.kevoree.library.java.toys:latest
+include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:latest
+include mvn:org.kevoree.library.java:org.kevoree.library.java.channels:latest
+include mvn:org.kevoree.library.java:org.kevoree.library.java.sample.helloworld:latest
+
+add node0 : JavaNode
+add sync : WSGroup
+attach node0 sync
+
+add node0.hello : ConsoSensor
+set node0.hello.time = "1000"
+
+add node0.ticker : Ticker
+add hub : SyncBroadcast
+bind node0.ticker.tick hub
+bind node0.hello.conso hub
