@@ -9,7 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.kevoree.library.java.sample.scaler</artifactId>
+    <groupId>org.kevoree.library.java.sample</groupId>
+    <version>1.0.0-SNAPSHOT</version>
 
+    <properties>
+        <kevoree.version>3.0.4</kevoree.version>
+    </properties>
 
     <dependencies>
         <dependency>

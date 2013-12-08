@@ -2,7 +2,7 @@ include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:latest
 include mvn:org.kevoree.library.java:org.kevoree.library.java.haproxy:latest
 include mvn:org.kevoree.library.java:org.kevoree.library.java.web:latest
 include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:latest
-include mvn:org.kevoree.library.java:org.kevoree.library.java.sample.scaler:latest
+include mvn:org.kevoree.library.java.sample:org.kevoree.library.java.sample.scaler:latest
 
 add node0 : JavaNode
 add sync : WSGroup
