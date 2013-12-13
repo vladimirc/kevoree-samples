@@ -1,10 +1,13 @@
-include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:latest
-include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:latest
-include mvn:org.kevoree.library.java:org.kevoree.library.java.toys:latest
-include mvn:org.kevoree.library.java:org.kevoree.library.java.channels:latest
+repo http://repo1.maven.org/maven2/
+repo http://oss.sonatype.org/content/repositories/releases/
+
+include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:RELEASE
+include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:RELEASE
+include mvn:org.kevoree.library.java:org.kevoree.library.java.toys:RELEASE
+include mvn:org.kevoree.library.java:org.kevoree.library.java.channels:RELEASE
 
 //this include your library, don't forget to do mvn clean install before
-include mvn:org.kevoree.library.java:org.kevoree.library.java.sample.breakdown:latest
+include mvn:org.kevoree.sample:org.kevoree.sample.breakdown:1.0-SNAPSHOT
 
 add node0 : JavaNode
 add node0.breakdown : BreakdownAlone

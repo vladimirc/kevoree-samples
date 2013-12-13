@@ -1,8 +1,12 @@
-include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:latest
-include mvn:org.kevoree.library.java:org.kevoree.library.java.toys:latest
-include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:latest
-include mvn:org.kevoree.library.java:org.kevoree.library.java.channels:latest
-include mvn:org.kevoree.library.sample:org.kevoree.library.java.sample.helloworld:latest
+repo http://repo1.maven.org/maven2/
+repo http://oss.sonatype.org/content/repositories/releases/
+
+include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:release
+include mvn:org.kevoree.library.java:org.kevoree.library.java.toys:release
+include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:release
+include mvn:org.kevoree.library.java:org.kevoree.library.java.channels:release
+
+include mvn:org.kevoree.sample:org.kevoree.sample.helloworld:1.0-SNAPSHOT
 
 add node0 : JavaNode
 add sync : WSGroup
