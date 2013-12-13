@@ -45,7 +45,7 @@ public class HelloProducerComponent implements HelloProductionListener {
 
     public void helloProduced(Object helloValue) {
 
-        helloProducedPort.call(helloValue);
+        helloProducedPort.send(helloValue);
 
     }
 }

@@ -45,10 +45,20 @@ public class FrameComponent {
                     send.addActionListener(new ActionListener() { //Listen to the send button.
                         public void actionPerformed(ActionEvent e) { //on click
                             textEntered.call(textField.getText(), new Callback() {
-                                public void run(Object result) { // Method called when a response is received.
+
+
+                                @Override
+                                public void onSuccess(Object result) {
                                     String response = ((Boolean)result?"Answered Yes.":"Answered No.");
                                     JOptionPane.showMessageDialog(mainFrame, response, "Message Read!", JOptionPane.INFORMATION_MESSAGE);
+
                                 }
+
+                                @Override
+                                public void onError(Throwable throwable) {
+
+                                }
+
                             });
                         }
                     });

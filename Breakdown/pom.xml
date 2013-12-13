@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.kevoree.library.java.sample.breakdown</artifactId>
     <properties>
-        <kevoree.version>3.0.4</kevoree.version>
+        <kevoree.version>3.1.0</kevoree.version>
     </properties>
     <dependencies>
         <dependency>
