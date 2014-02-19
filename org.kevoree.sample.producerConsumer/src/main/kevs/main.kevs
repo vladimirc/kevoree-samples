@@ -1,6 +1,5 @@
 //Adds a repository (for snapshots)
-repo http://repo1.maven.org/maven2/
-repo http://oss.sonatype.org/content/repositories/releases/
+repo "http://oss.sonatype.org/content/repositories/releases/"
 
 //Includes the libraries of types in the model
 include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:release
@@ -11,7 +10,7 @@ include mvn:org.kevoree.sample:org.kevoree.sample.producerconsumer:1.0-SNAPSHOT
 
 //Creates a node and sets its properties
 add node0 : JavaNode
-set node0.debug = "false"
+set node0.log = "false"
 set node0.started = "true"
 
 // Creates a Consumer component instance and set its properties
