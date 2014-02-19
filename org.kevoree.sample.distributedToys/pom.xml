@@ -10,7 +10,7 @@
     <name>Kev :: Sample :: DistributedToys</name>
 
     <properties>
-        <kevoree.version>3.1.0</kevoree.version>
+        <kevoree.version>3.4.0</kevoree.version>
     </properties>
 
     <build>
