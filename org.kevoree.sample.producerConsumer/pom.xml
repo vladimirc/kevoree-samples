@@ -11,7 +11,7 @@
     <name>Kev :: Sample :: ProducerConsumer</name>
 
     <properties>
-        <kevoree.version>3.6.8</kevoree.version>
+        <kevoree.version>5.1.3</kevoree.version>
     </properties>
 
     <dependencies>
@@ -46,6 +46,14 @@
                     <model>src/main/kevs/main.kevs</model>
                 </configuration>
             </plugin>
+   <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
+                 <configuration>
+                     <source>1.5</source>
+                     <target>1.5</target>
+                 </configuration>
+              </plugin>
         </plugins>
     </build>
 
