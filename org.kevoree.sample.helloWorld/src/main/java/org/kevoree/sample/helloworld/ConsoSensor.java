@@ -45,7 +45,6 @@ public class ConsoSensor implements Runnable {
         return ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage() + "";
     }
 
-    @Override
     public void run() {
         System.out.println("Current load : " + getCurrentLoad());
     }

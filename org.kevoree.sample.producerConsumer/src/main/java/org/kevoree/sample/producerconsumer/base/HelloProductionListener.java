@@ -8,5 +8,5 @@ package org.kevoree.sample.producerconsumer.base;
  */
 public interface HelloProductionListener {
 
-    public void helloProduced(Object helloValue);
+    public void helloProduced(String helloValue);
 }

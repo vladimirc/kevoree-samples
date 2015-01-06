@@ -2,7 +2,6 @@ package org.kevoree.sample.producerconsumer.callback;
 
 import org.kevoree.annotation.ComponentType;
 import org.kevoree.annotation.Input;
-import org.kevoree.annotation.Library;
 
 import javax.swing.*;
 
@@ -14,7 +13,6 @@ import javax.swing.*;
  */
 
 @ComponentType
-@Library(name = "Java - Samples")
 public class PopupComponent {
 
     @Input

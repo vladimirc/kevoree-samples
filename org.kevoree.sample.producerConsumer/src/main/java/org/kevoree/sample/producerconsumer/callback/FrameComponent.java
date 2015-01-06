@@ -2,6 +2,7 @@ package org.kevoree.sample.producerconsumer.callback;
 
 import org.kevoree.annotation.*;
 import org.kevoree.api.Callback;
+import org.kevoree.api.CallbackResult;
 import org.kevoree.api.Port;
 
 import javax.swing.*;
@@ -18,7 +19,6 @@ import java.lang.reflect.InvocationTargetException;
  */
 
 @ComponentType
-@Library(name = "Java - Samples")
 public class FrameComponent {
 
     private JFrame mainFrame;
@@ -44,21 +44,15 @@ public class FrameComponent {
 
                     send.addActionListener(new ActionListener() { //Listen to the send button.
                         public void actionPerformed(ActionEvent e) { //on click
-                            textEntered.call(textField.getText(), new Callback() {
-
-
-                                @Override
-                                public void onSuccess(Object result) {
-                                    String response = ((Boolean)result?"Answered Yes.":"Answered No.");
+                            textEntered.send(textField.getText(), new Callback() {
+                                public void onSuccess(CallbackResult callbackResult) {
+                                    String response = (Boolean.valueOf(callbackResult.getPayload()) ? "Answered Yes." : "Answered No.");
                                     JOptionPane.showMessageDialog(mainFrame, response, "Message Read!", JOptionPane.INFORMATION_MESSAGE);
-
                                 }
 
-                                @Override
                                 public void onError(Throwable throwable) {
 
                                 }
-
                             });
                         }
                     });

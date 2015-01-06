@@ -10,7 +10,6 @@ import org.kevoree.annotation.*;
  */
 
 @ComponentType
-@Library(name = "Java - Samples")
 public class HelloConsumerComponent {
 
     @Start

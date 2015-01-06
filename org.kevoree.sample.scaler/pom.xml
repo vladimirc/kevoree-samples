@@ -11,7 +11,7 @@
     <name>Kev :: Sample :: Scaler</name>
 
     <properties>
-        <kevoree.version>5.1.3</kevoree.version>
+        <kevoree.version>5.2.1</kevoree.version>
     </properties>
 
     <dependencies>
@@ -28,6 +28,11 @@
         <dependency>
             <groupId>org.kevoree</groupId>
             <artifactId>org.kevoree.kevscript</artifactId>
+            <version>${kevoree.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.kevoree</groupId>
+            <artifactId>org.kevoree.model</artifactId>
             <version>${kevoree.version}</version>
         </dependency>
     </dependencies>

@@ -1,6 +1,8 @@
 package org.kevoree.sample.producerconsumer.base;
 
 import org.kevoree.annotation.*;
+import org.kevoree.api.Callback;
+import org.kevoree.api.CallbackResult;
 
 
 /**
@@ -10,7 +12,6 @@ import org.kevoree.annotation.*;
  * Time: 13:42
  */
 @ComponentType
-@Library(name = "Java - Samples")
 public class HelloProducerComponent implements HelloProductionListener {
 
     @Output
@@ -43,9 +44,15 @@ public class HelloProducerComponent implements HelloProductionListener {
         startComponent();
     }
 
-    public void helloProduced(Object helloValue) {
+    public void helloProduced(String helloValue) {
+        helloProducedPort.send(helloValue, new Callback() {
+            public void onSuccess(CallbackResult callbackResult) {
 
-        helloProducedPort.send(helloValue);
+            }
 
+            public void onError(Throwable throwable) {
+
+            }
+        });
     }
 }
